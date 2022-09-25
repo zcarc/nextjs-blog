@@ -24,9 +24,6 @@ export default function Post({ postData }) {
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
-
-  console.log("postData: ", postData);
-
   return {
     props: {
       postData,
